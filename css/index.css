@@ -189,6 +189,16 @@ body .content-block ul {
 body .content-block ul li {
   margin: 2rem;
 }
+body .contact {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+body .contact input[type=text],
+body .contact textarea {
+  width: 80%;
+}
 nav {
   display: flex;
   flex-flow: row nowrap;

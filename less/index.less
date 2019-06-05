@@ -83,6 +83,38 @@ body {
     max-width: 1000px;
     width: 95%;
     .flex-centered-column();
+    
+    .profile {
+        .flex-centered-row();
+    }
+
+    .headshot {
+        max-width: 500px;
+        width: 40%;
+        height: auto;
+    }
+
+    .content {
+        margin: @margin;
+    }
+
+    .block {
+        border-top: @border;
+        padding-top: @padding;
+    }
+
+    .content-block {
+        margin: @margin;
+        .flex-centered-column();
+
+        ul {
+            .flex-centered-row();
+
+            li {
+                margin: @margin;
+            }
+        }
+    }
 }
 
 nav {
@@ -90,37 +122,5 @@ nav {
     
     a {
        margin: @margin; 
-    }
-}
-
-.profile {
-    .flex-centered-row();
-}
-
-.headshot {
-    max-width: 500px;
-    width: 40%;
-    height: auto;
-}
-
-.content {
-    margin: @margin;
-}
-
-.block {
-    border-top: @border;
-    padding-top: @padding;
-}
-
-.content-block {
-    margin: @margin;
-    .flex-centered-column();
-
-    ul {
-        .flex-centered-row();
-        
-        li {
-            margin: @margin;
-        }
     }
 }

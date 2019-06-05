@@ -88,6 +88,15 @@ html, body {
     text-decoration: none;
 }
 
+.colored-button {
+    margin: @double-spacing;
+    color: @secondary-red;
+    background: none;
+    border: 1px solid @secondary-red;
+    border-radius: 1rem;
+    padding: @half-spacing;
+}
+
 /*CSS*/
 body {
     max-width: 800px;
@@ -150,17 +159,14 @@ body {
                 .flex-centered-row();
 
                 li {
-                    margin: @double-spacing;
-                    color: @secondary-red;
-                    border: 1px solid @secondary-red;
-                    border-radius: 1rem;
-                    padding: @half-spacing;
+                    .colored-button();
                 }
             }
 
             /*Table*/
             th {
-                font-weight: 200;
+                background: @primary-red;
+                color: white;
             }
 
             th, td {
@@ -168,18 +174,19 @@ body {
                 padding: @single-spacing;
                 border: 1px solid black;
             }
-
-            tr:nth-child(even) {
-                background: @secondary-red;
-            }
         }
 
         .contact {
             width: @block-width;
             .flex-centered-column();
-
+            border-bottom: @border;
+            
             input[type=text], textarea {
                 width: 80%;
+            }
+            
+            input[type=submit] {
+                .colored-button();
             }
         }
     }
@@ -187,10 +194,7 @@ body {
     footer {
         width: @block-width;
         text-align: center;
-        background: gray;
-        
-        .copyright {
-            padding: @double-spacing;
-        }
+        color: @secondary-red;
+        margin-bottom: @double-spacing;
     }
 }

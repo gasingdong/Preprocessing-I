@@ -152,6 +152,14 @@ body {
   color: #E93E3E;
   text-decoration: none;
 }
+.colored-button {
+  margin: 2rem;
+  color: #E93E3E;
+  background: none;
+  border: 1px solid #E93E3E;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
 /*CSS*/
 body {
   max-width: 800px;
@@ -224,12 +232,14 @@ body .content .content-block ul {
 body .content .content-block ul li {
   margin: 2rem;
   color: #E93E3E;
+  background: none;
   border: 1px solid #E93E3E;
   border-radius: 1rem;
   padding: 0.5rem;
 }
 body .content .content-block th {
-  font-weight: 200;
+  background: #A90707;
+  color: white;
 }
 body .content .content-block th,
 body .content .content-block td {
@@ -237,24 +247,28 @@ body .content .content-block td {
   padding: 1rem;
   border: 1px solid black;
 }
-body .content .content-block tr:nth-child(even) {
-  background: #E93E3E;
-}
 body .content .contact {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  border-bottom: 1px dotted #A90707;
 }
 body .content .contact input[type=text],
 body .content .contact textarea {
   width: 80%;
 }
+body .content .contact input[type=submit] {
+  margin: 2rem;
+  color: #E93E3E;
+  background: none;
+  border: 1px solid #E93E3E;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
 body footer {
   width: 100%;
   text-align: center;
-  background: gray;
-}
-body footer .copyright {
-  padding: 2rem;
+  color: #E93E3E;
+  margin-bottom: 2rem;
 }

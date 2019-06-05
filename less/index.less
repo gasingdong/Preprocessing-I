@@ -3,6 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -68,6 +69,7 @@ html, body {
 @block-width: 100%;
 @secondary-red: #E93E3E;
 @primary-red: #A90707;
+@font: 'Open Sans', serif;
 
 /*Mixins*/
 .flex-centered-column {
@@ -102,6 +104,7 @@ html, body {
     max-width: 800px;
     width: 95%;
     .flex-centered-column();
+    font-family: @font;
     
     h1 {
         font-size: @double-spacing;
@@ -145,7 +148,7 @@ html, body {
         
         .headshot {
             max-width: 500px;
-            width: 50%;
+            width: 30%;
             border-radius: 50%;
             padding: @half-spacing;
             border: @big-border;
@@ -197,6 +200,10 @@ html, body {
         .contact {
             width: @block-width;
             .flex-centered-column();
+            
+            p {
+                margin-bottom: @half-spacing;
+            }
             
             input[type=text], textarea {
                 width: 80%;

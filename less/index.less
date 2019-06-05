@@ -100,6 +100,11 @@ body {
         color: @primary-red;
     }
     
+    h2 {
+        margin-bottom: @single-spacing;
+        font-size: 1.25rem;
+    }
+    
     nav {
         .flex-centered-row();
     
@@ -130,48 +135,52 @@ body {
     .content {
         margin: @double-spacing;
         margin-top: @half-spacing;
-    }
+        
+        .block {
+            border-top: @border;
+            padding-top: @double-spacing;
+        }
 
-    .block {
-        border-top: @border;
-        padding-top: @double-spacing;
-    }
+        .content-block {
+            margin: @double-spacing;
+            .flex-centered-column();
 
-    .content-block {
-        margin: @double-spacing;
-        .flex-centered-column();
+            /*Lists*/
+            ul {
+                .flex-centered-row();
 
-        /*Lists*/
-        ul {
-            .flex-centered-row();
+                li {
+                    margin: @double-spacing;
+                    color: @secondary-red;
+                    border: 1px solid @secondary-red;
+                    border-radius: 1rem;
+                    padding: @half-spacing;
+                }
+            }
 
-            li {
-                margin: @double-spacing;
+            /*Table*/
+            th {
+                font-weight: 200;
+            }
+
+            th, td {
+                text-align: left;
+                padding: @single-spacing;
+                border: 1px solid black;
+            }
+
+            tr:nth-child(even) {
+                background: @secondary-red;
             }
         }
-        
-        /*Table*/
-        th {
-            background: @primary-red;
-        }
-        
-        th, td {
-            text-align: left;
-            padding: @single-spacing;
-            border: 1px solid black;
-        }
-        
-        tr:nth-child(odd) {
-            background: @secondary-red;
-        }
-    }
-    
-    .contact {
-        width: @block-width;
-        .flex-centered-column();
-        
-        input[type=text], textarea {
-            width: 80%;
+
+        .contact {
+            width: @block-width;
+            .flex-centered-column();
+
+            input[type=text], textarea {
+                width: 80%;
+            }
         }
     }
     

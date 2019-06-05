@@ -170,6 +170,7 @@ body .profile {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  justify-content: space-around;
 }
 body .headshot {
   max-width: 500px;

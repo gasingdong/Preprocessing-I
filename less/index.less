@@ -62,7 +62,9 @@ html, body {
 /*Variables*/
 @double-spacing: 2rem;
 @single-spacing: 1rem;
-@border: 1px dotted black;
+@half-spacing: 0.5rem;
+@border: 1px dotted @primary-red;
+@big-border: 4px solid @primary-red;
 @block-width: 100%;
 @secondary-red: #E93E3E;
 @primary-red: #A90707;
@@ -81,33 +83,53 @@ html, body {
     align-items: center;
 }
 
+.colored-links {
+    color: @secondary-red;
+    text-decoration: none;
+}
+
 /*CSS*/
 body {
-    max-width: 1000px;
+    max-width: 800px;
     width: 95%;
     .flex-centered-column();
+    
+    h1 {
+        font-size: @double-spacing;
+        margin-bottom: @single-spacing;
+        color: @primary-red;
+    }
     
     nav {
         .flex-centered-row();
     
         a {
-            margin: @double-spacing; 
+            margin: @double-spacing;
+            .colored-links();
         }
     }
     
     .profile {
         .flex-centered-row();
         justify-content: space-around;
-    }
-
-    .headshot {
-        max-width: 500px;
-        width: 40%;
-        height: auto;
+        padding: @half-spacing;
+        margin: @double-spacing;
+        margin-top: @half-spacing;
+        margin-bottom: @half-spacing;
+        
+        .headshot {
+            max-width: 500px;
+            width: 40%;
+            height: auto;
+            border-radius: 50%;
+            padding: @half-spacing;
+            border: @big-border;
+        }
     }
 
     .content {
         margin: @double-spacing;
+        margin-top: @half-spacing;
     }
 
     .block {
@@ -119,6 +141,7 @@ body {
         margin: @double-spacing;
         .flex-centered-column();
 
+        /*Lists*/
         ul {
             .flex-centered-row();
 
@@ -127,6 +150,7 @@ body {
             }
         }
         
+        /*Table*/
         th {
             background: @primary-red;
         }

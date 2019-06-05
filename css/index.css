@@ -166,7 +166,7 @@ body {
   border-radius: 1rem;
   padding: 0.5rem;
 }
-/*CSS*/
+/*Main CSS*/
 .container {
   max-width: 800px;
   width: 95%;
@@ -225,6 +225,7 @@ body {
   border-radius: 50%;
   padding: 0.5rem;
   border: 4px solid #A90707;
+  /*Eliminate spacing issues with mobile sizing + border padding*/
 }
 @media (max-width: 500px) {
   .container .profile .headshot {
@@ -233,7 +234,7 @@ body {
   }
 }
 .container .content {
-  width: 90%;
+  width: 100%;
   margin-top: -2rem;
   padding: 1rem;
 }

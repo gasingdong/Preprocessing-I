@@ -63,6 +63,7 @@ html, body {
 @margin: 2rem;
 @border: 1px dotted black;
 @padding: 2rem;
+@block-width: 100%;
 
 /*Mixins*/
 .flex-centered-column {
@@ -83,6 +84,14 @@ body {
     max-width: 1000px;
     width: 95%;
     .flex-centered-column();
+    
+    nav {
+    .flex-centered-row();
+    
+        a {
+            margin: @margin; 
+        }
+    }
     
     .profile {
         .flex-centered-row();
@@ -117,19 +126,21 @@ body {
     }
     
     .contact {
-        width: 100%;
+        width: @block-width;
         .flex-centered-column();
         
         input[type=text], textarea {
             width: 80%;
         }
     }
-}
-
-nav {
-    .flex-centered-row();
     
-    a {
-       margin: @margin; 
+    footer {
+        width: @block-width;
+        text-align: center;
+        background: gray;
+        
+        .copyright {
+            padding: @padding;
+        }
     }
 }

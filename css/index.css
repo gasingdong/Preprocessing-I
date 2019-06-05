@@ -156,6 +156,15 @@ body {
   flex-flow: column nowrap;
   align-items: center;
 }
+body nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body nav a {
+  margin: 2rem;
+}
 body .profile {
   display: flex;
   flex-flow: row nowrap;
@@ -199,12 +208,11 @@ body .contact input[type=text],
 body .contact textarea {
   width: 80%;
 }
-nav {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+body footer {
+  width: 100%;
+  text-align: center;
+  background: gray;
 }
-nav a {
-  margin: 2rem;
+body footer .copyright {
+  padding: 2rem;
 }

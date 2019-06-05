@@ -60,10 +60,12 @@ html, body {
 /*============MY CODE STARTS HERE=============*/
 
 /*Variables*/
-@margin: 2rem;
+@double-spacing: 2rem;
+@single-spacing: 1rem;
 @border: 1px dotted black;
-@padding: 2rem;
 @block-width: 100%;
+@secondary-red: #E93E3E;
+@primary-red: #A90707;
 
 /*Mixins*/
 .flex-centered-column {
@@ -89,7 +91,7 @@ body {
     .flex-centered-row();
     
         a {
-            margin: @margin; 
+            margin: @double-spacing; 
         }
     }
     
@@ -104,24 +106,38 @@ body {
     }
 
     .content {
-        margin: @margin;
+        margin: @double-spacing;
     }
 
     .block {
         border-top: @border;
-        padding-top: @padding;
+        padding-top: @double-spacing;
     }
 
     .content-block {
-        margin: @margin;
+        margin: @double-spacing;
         .flex-centered-column();
 
         ul {
             .flex-centered-row();
 
             li {
-                margin: @margin;
+                margin: @double-spacing;
             }
+        }
+        
+        th {
+            background: @primary-red;
+        }
+        
+        th, td {
+            text-align: left;
+            padding: @single-spacing;
+            border: 1px solid black;
+        }
+        
+        tr:nth-child(odd) {
+            background: @secondary-red;
         }
     }
     
@@ -140,7 +156,7 @@ body {
         background: gray;
         
         .copyright {
-            padding: @padding;
+            padding: @double-spacing;
         }
     }
 }

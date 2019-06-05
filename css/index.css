@@ -198,6 +198,18 @@ body .content-block ul {
 body .content-block ul li {
   margin: 2rem;
 }
+body .content-block th {
+  background: #A90707;
+}
+body .content-block th,
+body .content-block td {
+  text-align: left;
+  padding: 1rem;
+  border: 1px solid black;
+}
+body .content-block tr:nth-child(odd) {
+  background: #E93E3E;
+}
 body .contact {
   width: 100%;
   display: flex;

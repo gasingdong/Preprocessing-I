@@ -89,7 +89,7 @@ html, body {
 }
 
 .colored-button {
-    margin: @double-spacing;
+    margin: @single-spacing;
     color: @secondary-red;
     background: none;
     border: 1px solid @secondary-red;
@@ -98,7 +98,7 @@ html, body {
 }
 
 /*CSS*/
-body {
+.container {
     max-width: 800px;
     width: 95%;
     .flex-centered-column();
@@ -116,6 +116,7 @@ body {
     
     nav {
         .flex-centered-row();
+        justify-content: space-around;
     
         a {
             margin: @double-spacing;
@@ -124,36 +125,53 @@ body {
     }
     
     .profile {
+        width: @block-width;
         .flex-centered-row();
         justify-content: space-around;
         padding: @half-spacing;
-        margin: @double-spacing;
         margin-top: @half-spacing;
         margin-bottom: @half-spacing;
         
+        @media(max-width: 500px) {
+            .flex-centered-column();
+        }
+        
+        .title {
+            
+            @media(max-width: 500px) {
+                text-align: center;
+            }
+        }
+        
         .headshot {
             max-width: 500px;
-            width: 40%;
-            height: auto;
+            width: 50%;
             border-radius: 50%;
             padding: @half-spacing;
             border: @big-border;
+            
+            @media(max-width: 500px) {
+                padding: 0;
+                border: none;
+            }
         }
     }
 
     .content {
-        margin: @double-spacing;
-        margin-top: @half-spacing;
+        width: 90%;
+        margin-top: -@double-spacing;
+        padding: @single-spacing;
         
         .block {
-            border-top: @border;
             padding-top: @double-spacing;
+            width: @block-width;
+            border-bottom: @border;
         }
 
         .content-block {
-            margin: @double-spacing;
             .flex-centered-column();
-
+            padding: @double-spacing;
+            
             /*Lists*/
             ul {
                 .flex-centered-row();
@@ -179,7 +197,6 @@ body {
         .contact {
             width: @block-width;
             .flex-centered-column();
-            border-bottom: @border;
             
             input[type=text], textarea {
                 width: 80%;

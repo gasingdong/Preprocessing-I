@@ -4,6 +4,8 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -57,3 +59,176 @@ html, body {
     height: 100%;
 }
 
+/*============MY CODE STARTS HERE=============*/
+
+/*Variables*/
+
+@double-spacing: 2rem;
+@single-spacing: 1rem;
+@half-spacing: 0.5rem;
+@block-width: 100%;
+
+@border: 1px dotted @primary-red;
+@big-border: 4px solid @primary-red;
+
+@secondary-red: #E93E3E;
+@primary-red: #A90707;
+
+@font: 'Open Sans', serif;
+
+/*Mixins*/
+
+.flex-centered-column {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.flex-centered-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.colored-links {
+    color: @secondary-red;
+    text-decoration: none;
+}
+
+.colored-button {
+    margin: @single-spacing;
+    color: @secondary-red;
+    background: none;
+    border: 1px solid @secondary-red;
+    border-radius: 1rem;
+    padding: @half-spacing;
+}
+
+/*Main CSS*/
+body {
+    .flex-centered-row();
+    align-items: baseline;
+    
+    .container {
+        max-width: 800px;
+        font-family: @font;
+
+        h1 {
+            font-size: @double-spacing;
+            margin-bottom: @single-spacing;
+            color: @primary-red;
+        }
+
+        h2 {
+            margin-bottom: @single-spacing;
+            font-size: 1.25rem;
+        }
+
+        nav {
+            .flex-centered-row();
+            justify-content: space-around;
+
+            a {
+                margin: @double-spacing;
+                .colored-links();
+            }
+        }
+
+        .profile {
+            width: @block-width;
+            .flex-centered-row();
+            justify-content: space-around;
+            padding: @half-spacing;
+            margin-top: @half-spacing;
+            margin-bottom: @half-spacing;
+
+            @media(max-width: 500px) {
+                .flex-centered-column();
+            }
+
+            .title {
+
+                @media(max-width: 500px) {
+                    text-align: center;
+                }
+            }
+
+            .headshot {
+                max-width: 500px;
+                width: 30%;
+                border-radius: 50%;
+                padding: @half-spacing;
+                border: @big-border;
+
+                /*Eliminate spacing issues with mobile sizing + border padding*/
+                @media(max-width: 500px) {
+                    padding: 0;
+                    border: none;
+                }
+            }
+        }
+
+        .content {
+            width: 100%;
+            margin-top: -@double-spacing;
+            padding: @single-spacing;
+
+            .block {
+                padding-top: @double-spacing;
+                width: @block-width;
+                border-bottom: @border;
+            }
+
+            .content-block {
+                .flex-centered-column();
+                padding: @double-spacing;
+
+                /*Lists*/
+                ul {
+                    .flex-centered-row();
+
+                    li {
+                        .colored-button();
+                    }
+                }
+
+                /*Table*/
+                th {
+                    background: @primary-red;
+                    color: white;
+                }
+
+                th, td {
+                    text-align: left;
+                    padding: @single-spacing;
+                    border: 1px solid black;
+                }
+            }
+
+            .contact {
+                width: @block-width;
+                .flex-centered-column();
+
+                p {
+                    margin-bottom: @half-spacing;
+                }
+
+                input[type=text], textarea {
+                    width: 80%;
+                }
+
+                input[type=submit] {
+                    .colored-button();
+                }
+            }
+        }
+
+        footer {
+            width: @block-width;
+            text-align: center;
+            color: @secondary-red;
+            margin-bottom: @double-spacing;
+        }
+    }
+}

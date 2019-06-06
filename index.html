@@ -2,18 +2,90 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>My Resume</title>
+    <title>Brandon Dong Resume</title>
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css">
 
-  <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
+    <![endif]-->
 </head>
 
 <body>
-  <h1>My Resume</h1>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="profile">
+                <div class="title">
+                    <h1>Brandon Dong</h1>
+                    <h2>Full Stack Web Developer</h2>
+                </div>
+                <img class="headshot" src="images/headshot.jpg">
+            </div>
+        </header>
+        <section class="content">
+            <div>
+                <div class="content-block block">
+                    I'm a full stack web developer from Riverside, CA. I'm experienced in building websites and creating applications. If you're interested in working with me on your next project, feel free to contact me.
+                </div>
+                <div class="content-block block">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS/LESS</li>
+                        <li>Javascript</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+                <div class="content-block block">
+                    <h2>Work History</h2>
+                    <table>
+                        <tr>
+                            <th>Period</th>
+                            <th>Company</th>
+                            <th>Role</th>
+                        </tr>
+                        <tr>
+                            <td>September 2018 - Present</td>
+                            <td>Lucky Plenty</td>
+                            <td>Owner & Manager</td>
+                        </tr>
+                        <tr>
+                            <td>January 2016 - September 2018</td>
+                            <td>Sandy's Outlet</td>
+                            <td>Online Sales Manager</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="content-block block">
+                    <h2>Contact Me</h2>
+                    <form class="contact">
+                        <p>Name:<br></p>
+                        <input type="text" name="name"><br>
+                        <p>E-mail Address:<br></p>
+                        <input type="text" name="email"><br>
+                        <p>Message:<br></p>
+                        <textarea rows="5">
+                        </textarea><br>
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="copyright">
+                <p>Copyright Brandon Dong 2019</p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
